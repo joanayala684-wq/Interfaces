@@ -1,0 +1,50 @@
+* {
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+    font-family:verdana,sans-serif;
+    margin-left:20px; 
+    margin-right:20px;
+	background-color:lightgoldenrodyellow;
+} 
+
+/* estilo para la cabecera de nivel 2 */ 
+h2 {
+    font-family:verdana,sans-serif; 
+    font-size:10pt;
+    color:darkgreen;
+} 
+
+/* estilos para otras etiquetas */ 
+b, td {
+    font-family:verdana,sans-serif;
+} 
+table {
+	border: 1px solid black;
+}
+th {
+    font-family:verdana,sans-serif;
+    font-size:x-small; 
+    color:white;
+    background-color:darkgreen;
+    height: 50px;
+}
+td {
+	border: 1px solid black;
+    height: 30px;
+} 
+
+/* estilos según el contexto */
+td b {
+    color:darkgreen;
+    font-size:12px
+} 
+ul li {
+    list-style-type: disc;
+}
+ul b {
+    color:darkviolet;
+    font-size:12px
+}

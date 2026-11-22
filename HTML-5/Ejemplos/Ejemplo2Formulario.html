@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validar formularios con HTML5 y CSS3</title>
+	<link rel="stylesheet" href="Ejemplo2Formulario.css">
+</head>
+<body>
+	<main>
+		<form id="formulario" action="#" method="post">
+			<!--Atributos actuales: autocomplete (name, email, tel, postal-code, cc-number…) para que el navegador rellene los datos.
+				inputmode="numeric" y maxlength en teléfono, código postal y tarjeta.
+				accept="image/*" en la foto.
+				action y method en el <form>.-->
+			<h1>Formulario de compra</h1>
+
+			<fieldset>
+				<legend>Datos personales</legend>
+				<div class="campo">
+					<label for="nombre">Nombre</label>
+					<!-- Permite letras (con acentos y ñ) y espacios -->
+					<input id="nombre" name="nombre" type="text" pattern="[\p{L} ]+"
+						placeholder="Escribe tu nombre completo" autocomplete="name" required autofocus>
+				</div>
+
+				<div class="campo">
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email"
+						placeholder="correo@dominio.com" autocomplete="email" required>
+				</div>
+
+				<div class="campo">
+					<label for="telefono">Teléfono</label>
+					<!-- Obliga a escribir 9 dígitos -->
+					<input id="telefono" name="telefono" type="tel" pattern="[0-9]{9}"
+						inputmode="numeric" placeholder="Ej. 655444333" autocomplete="tel" required>
+				</div>
+
+				<div class="campo">
+					<label for="cp">Código postal</label>
+					<!-- Código postal español: 01000 a 52999 -->
+					<input id="cp" name="cp" type="text" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}"
+						inputmode="numeric" maxlength="5" placeholder="p. ej.: 28029"
+						autocomplete="postal-code" required>
+				</div>
+
+				<div class="campo">
+					<label for="foto">Sube una foto</label>
+					<input id="foto" name="foto" type="file" accept="image/*">
+				</div>
+
+				<div class="campo">
+					<label for="pais">País</label>
+					<!-- \p{L} valida cualquier letra, incluidas la ñ y las vocales acentuadas -->
+					<input id="pais" name="pais" type="text" pattern="[\p{L} ]+"
+						autocomplete="country-name" required>
+				</div>
+
+				<div class="campo">
+					<label for="nacimiento">Fecha de nacimiento</label>
+					<input id="nacimiento" name="nacimiento" type="date"
+						autocomplete="bday" required>
+				</div>
+
+				<div class="campo">
+					<label for="colorfav">Color favorito</label>
+					<input id="colorfav" name="colorfav" type="color" value="#af71af">
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Datos de tarjeta de crédito</legend>
+
+				<div class="campo">
+					<label for="numtarjeta">Número</label>
+					<input id="numtarjeta" name="numtarjeta" type="text" pattern="\d{4}-\d{4}-\d{4}-\d{4}"
+						inputmode="numeric" placeholder="5555-4444-3333-2222"
+						autocomplete="cc-number" required>
+				</div>
+
+				<div class="campo">
+					<label for="nomtarjeta">Nombre</label>
+					<input id="nomtarjeta" name="nomtarjeta" type="text"
+						placeholder="Nombre del propietario" autocomplete="cc-name" required>
+				</div>
+
+				<div class="campo">
+					<label for="mescad">Mes de caducidad</label>
+					<div class="rango">
+						<input id="mescad" name="mescad" type="range" value="1" min="1" max="12" step="1">
+						<output for="mescad" id="mesvalor">1</output>
+					</div>
+				</div>
+			</fieldset>
+
+			<button type="submit">Realizar compra</button>
+		</form>
+	</main>
+
+	<script>
+		// Muestra el valor elegido en el control deslizante
+		const mes = document.getElementById('mescad');
+		const salida = document.getElementById('mesvalor');
+		mes.addEventListener('input', () => {
+			salida.textContent = mes.value;
+		});
+	</script>
+</body>
+</html>

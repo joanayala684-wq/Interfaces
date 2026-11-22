@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Fitness</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>Formulario de Registro</h1>
+        <p>Completa la informacion solicitada</p>
+    </header>
+    <form class="formulario">
+        <fieldset class="personales">
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Escribe tu apellido">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" id="fecha" name="fecha" required>
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="600123123">
+        </fieldset>
+        <fieldset class="usuarios">
+            <legend>Datos de usuarios</legend>
+            <label for="correo">Correo electronico</label>
+            <input type="email" id="correo" name="correo" placeholder="correo@dominio.com">
+            <label for="password">contraseña</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirma">Confirmarcontraseña</label>
+            <input type="password" id="confirma" name="confirma" required>
+        </fieldset>
+        <fieldset class="web">
+            <legend>Datos de la web</legend>
+            <label for="web">Nombre de la web</label>
+            <input type="url" id="web" name="web" placeholder="htpps://www.miaw67.com">
+            <label for="color">Color principal</label>
+            <input type="color" id="color" name="color" >
+            <label for="Descripcion">Descripcion</label>
+            <textarea type="text" id="Descripcion" name="Descripcion" placeholder="Describe tu proyecto web"></textarea>
+        </fieldset>
+        <button type="submit">Crear Cuenta</button>
+    
+    </form>
+</body>
+
+</html>

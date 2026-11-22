@@ -1,0 +1,54 @@
+* {
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+    background: #215968;
+	margin-top:30px;
+	width:100%;
+}
+.disco {
+	list-style-type:disc;
+	list-style-position:inside;
+	font: italic 20px Calibri;
+}
+.romano {
+	list-style-type:upper-roman;
+	list-style-position:inside;
+	font:bold 18px Tahoma;
+}
+#cabecera {
+	width:80%;
+	margin:auto;
+	padding:10px;
+	text-align:center;
+	font:bolder 24px Calibri;
+	border:5 outset #215968;
+	background:#B7DEE8;
+	color:#215968;	
+}
+#cabecera:hover {
+	width: 90%;
+	font-size:30px;
+	padding-top:20px;
+}
+#cuerpo {
+	background: #DBEEF4;
+	width:80%;
+	margin:auto;
+	padding:20px;	
+}
+a {
+	text-decoration:none;
+}
+a:link {
+	color:#31859C;
+}
+a:hover {
+	color:#DBEEF4;
+	background:#215968;
+}
+a:visited {
+	color: #4BACC6;
+}

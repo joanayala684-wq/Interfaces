@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo 1 – Estructura HTML5</title>
+
+    <!-- Fuente Montserrat (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Ejemplo1.css">
+</head>
+<body>
+    <header id="top" class="cabecera-web">
+        <hgroup>
+            <h1>Título de la página</h1>
+            <p>Subtítulo de la página</p>
+        </hgroup>
+    </header>
+
+    <nav class="menu-principal" aria-label="Navegación principal">
+        <ul>
+            <li><a href="#art1">Artículo 1</a></li>
+            <li><a href="#art2">Artículo 2</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenido">
+        <main>
+            <article id="art1">
+                <header>
+                    <h2>Título del post 1</h2>
+                    <p>Datos del post 1: autor, fecha, etc.</p>
+                    <p>Publicado el <time datetime="2023-11-08T18:10:45">08-11-2023</time></p>
+                </header>
+                <p>Contenido del artículo 1</p>
+                <figure>
+                    <i class="fa-brands fa-instagram" role="img" aria-label="Logotipo de Instagram"></i>
+                    <figcaption>Esta es la imagen del artículo 1</figcaption>
+                </figure>
+                <a href="#top">Volver arriba</a>
+            </article>
+
+            <!-- Más artículos -->
+            <article id="art2">
+                <header>
+                    <h2>Título del post 2</h2>
+                    <p>Datos del post 2: autor, fecha, etc.</p>
+                </header>
+                <p>Contenido del artículo 2</p>
+                <a href="#top">Volver arriba</a>
+            </article>
+        </main>
+
+        <aside aria-label="Barra lateral">
+            <p>Barra lateral / Sidebar</p>
+        </aside>
+    </div>
+
+    <footer>
+        <div id="copyright">
+            <small>(( Datos Copyright ))</small>
+        </div>
+        <address id="contacto">
+            (( Datos de Contacto ))
+        </address>
+        <nav id="enlaces" aria-label="Enlaces del pie de página">
+            <p>(( Mapa web, Política, etc. ))</p>
+            <a href="#top">Volver arriba</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: radial-gradient(at top left, #fff, #b9a6f0) no-repeat;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    color: #2b1640;
+    width: 80%;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+        "header header"
+        "nav intro"
+        "content content";
+    column-gap: 50px;
+    align-items: start;
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+.intro { grid-area: intro; }
+.content { grid-area: content; }
+@keyframes animacion-titulo {
+    from {
+        background-color: #ffffff;
+        color: #2b1640;
+        padding-right: 0px;
+    }
+    to {
+        background-color: #2b1640;
+        color: #ffffff;
+        padding-right: 20px;
+    }
+}
+
+header h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    width: 40%;
+    color: #2b1640;
+    background-color: #ffffff;
+    padding: 5px 0 5px 10px;
+    animation: animacion-titulo 5s ease 1s 2 alternate;
+}
+nav {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    height: 310px;
+    background-color: #2b1640;
+    color: #ffffff;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 3s ease, color 3s ease, border-radius 3s ease;
+}
+
+nav a:hover {
+    background-color: #b9a6f0;
+    color: #2b1640;
+    border-top-right-radius: 100px;
+}
+.intro {
+    display: grid;
+    grid-template-rows: 200px 140px;
+    gap: 10px;
+    height: 350px;
+    justify-items: end;
+}
+
+.intro img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 100px;
+    filter: grayscale(100%) blur(2px);
+    transition: transform 3s ease 1s, filter 3s ease 1s;
+}
+
+.intro img:hover {
+    transform: translateY(50px) scale(1.5);
+    filter: grayscale(0%) blur(0px);
+}
+
+.redes {
+    align-self: end;
+    text-align: right;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.iconos-redes a {
+    color: #2b1640;
+    font-size: 1.5rem;
+}
+.content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.content h2 {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 8px;
+}

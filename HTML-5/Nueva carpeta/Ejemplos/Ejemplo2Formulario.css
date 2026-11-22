@@ -1,0 +1,117 @@
+@font-face {
+	font-family: mifuente;
+	src: url(JuraLight.ttf);
+	font-weight: bold;
+	font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background: #d2ccec;
+	color: #5B3A5B;
+	font-family: mifuente, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 20px;
+}
+
+#formulario {
+	margin: auto;
+	background: #d2ccec;
+	padding: 30px;
+	width: 100%;
+	max-width: 600px;
+	border: groove 10px #AF71AF;
+	border-radius: 5px;
+}
+
+#formulario h1 {
+	font-size: 28px;
+	text-align: center;
+}
+
+#formulario fieldset {
+	margin: 15px 0;
+}
+
+#formulario legend {
+	font-size: 20px;
+	text-align: center;
+}
+
+/* Cada pareja etiqueta + control se coloca en una rejilla de dos columnas */
+.campo {
+	display: grid;
+	grid-template-columns: 250px 1fr;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+#formulario label {
+	font-size: 20px;
+}
+
+#formulario input {
+	min-height: 30px;
+	width: 100%;
+	font-family: inherit;
+	font-size: 16px;
+	background: white;
+	border: solid 1px #5B3A5B;
+	border-radius: 5px;
+}
+
+input:required {
+	outline: 1px solid #5B3A5B;
+}
+
+/* Aviso visual solo cuando el usuario ya ha interactuado con el campo */
+input:user-invalid {
+	outline: 2px solid #b00020;
+}
+
+input:focus-visible,
+button:focus-visible {
+	outline: 3px solid #AF71AF;
+	outline-offset: 2px;
+}
+
+/* Control deslizante + valor elegido */
+.rango {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.rango output {
+	min-width: 2ch;
+	font-size: 20px;
+}
+
+button {
+	border-radius: 5px;
+	font-size: 16px;
+	width: 200px;
+	height: 40px;
+	color: #5B3A5B;
+	font-family: mifuente, sans-serif;
+	cursor: pointer;
+}
+
+/* Adaptación a móvil: etiqueta encima del campo */
+@media (max-width: 600px) {
+	.campo {
+		grid-template-columns: 1fr;
+		gap: 4px;
+	}
+
+	#formulario {
+		padding: 15px;
+	}
+}

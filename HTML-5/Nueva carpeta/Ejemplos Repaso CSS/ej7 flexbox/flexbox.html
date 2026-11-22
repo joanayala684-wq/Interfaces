@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .flex-container1 {
+            margin-top: 20px;
+          display: flex;
+                 
+          flex-direction:row;
+          flex-wrap: wrap;
+          justify-content:space-around;
+          align-items: center;
+        }
+         .flex-container1 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+        
+          font-size: 30px;
+          text-align: center;       
+          
+        }
+        #titulo{
+            font-size: 4em;
+        }
+        #menu{
+           width: 40%; 
+           background-color: white;
+           display:flex;
+           justify-content: space-around;
+           flex-wrap: wrap;
+        }
+        .flex-container2 {
+            margin-top: 40px;
+          display: flex;
+                 
+          flex-direction:row;
+          flex-wrap: wrap;
+          justify-content:center;
+          align-items: center;
+        }
+        
+        .flex-container2 > img {
+          background-color: #f1f1f1;
+          margin: 10px;
+        
+          font-size: 30px;
+          text-align: center;       
+          
+        }
+        img{
+            max-width: 100%;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        /*
+        #dos{
+            align-self: center;
+        }
+        */
+    </style>
+</head>
+<body>
+     <div class="flex-container1">
+        <div id="titulo">MONTEJO</div>
+        <div id="menu"><a href="#">Rutas</a><a href="#">Reservas</a><a href="#">Contacto</a></div>
+    </div>
+    <div class="flex-container2">
+        <img src="img1.jpg" width="800">
+        <img src="img2.jpg">
+        <img src="img3.jpg">  
+        <!--<div>4</div>-->
+    </div>
+</body>
+</html>

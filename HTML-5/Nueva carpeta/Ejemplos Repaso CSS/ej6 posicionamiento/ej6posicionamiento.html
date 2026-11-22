@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<link rel="StyleSheet" href="ej6posicionamiento.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	<title>Ejemplo Posicionamiento</title>
+	</head>
+	<body>
+	<h1>NO define posición</h1>
+
+	<div id="caja1">CAJA1 No define posición, por lo que es static</div>
+	<div id="caja2">CAJA2 Capa Absoluta (sólo tiene como contenedor a "body") por lo tanto es relativa a body.top=150.left=400 </div>
+	<div id="caja3">CAJA3 Capa de posicionamiento relative. Se coloca según la posición que le tocaría en el flujo HTML.t=10.l=30</div>
+	
+	<div id="caja4">CAJA4 Capa Fija se coloca como una absoluta.t=10.l=500. Tiene esa posición aunque se suba o baje la página en la ventana del navegador</div>
+	<div id="caja5">
+		Caja5. Posicion absoluta respecto a body top=300 left=500
+		<div id="caja6"> CAJA 6 Capa absoluta, se referencia según a su contenedor caja5 porque no es un static.t=60.l=15</div>
+	</div>
+	<h2>La última en ponerse</h2>
+	</body>
+</html>

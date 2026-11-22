@@ -1,0 +1,66 @@
+* {
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    font-size:18px;
+    background-color:beige;
+}
+
+#caja1 {
+    background-color:darkkhaki; 
+    padding:10px; 
+    text-align: center; 
+    width: 300px;
+}
+
+#caja2 {
+	position: absolute;
+	width: 300px;
+	padding: 10px;
+	background-color:cadetblue;
+	text-align:right;
+	top:150px;
+	left: 400px;
+}
+
+#caja3 {
+    position: relative; 
+    width: 300px; 
+    padding: 10px; 
+    background-color:#ffc;
+    top:10px; 
+    left: 30px;}
+
+#caja4 {
+    position: fixed; 
+    width: 300px; 
+    padding: 10px; 
+    background-color:bisque; 
+    top:10px; 
+    left: 500px;
+}
+
+#caja5 {
+	position: absolute;
+	width: 350px;
+	height:200px;
+	padding: 10px;
+	background-color:coral;
+	text-align:right;
+	top:300px;
+	left: 500px;
+}
+
+#caja5 #caja6{
+    position: absolute; 
+    width: 300px; 
+    padding: 10px; 
+    background-color: #ffc; 
+    text-align:right; 
+    top:60px; 
+    left: 15px;
+}

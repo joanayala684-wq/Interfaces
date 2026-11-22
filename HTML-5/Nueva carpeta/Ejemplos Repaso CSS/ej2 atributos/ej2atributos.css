@@ -1,0 +1,56 @@
+* {
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+	background:#91A8D1;
+	color:#215968;
+	font-family:'Tahoma';
+	font-size:14px;
+	margin:20px 50px 0px 50px;
+}
+h1 {
+  text-align:left;
+  text-decoration:overline;
+  letter-spacing:10px;
+  word-spacing:30px;
+  text-transform:capitalize;
+  font-size:36px;
+  border: 2px dotted #215968;
+  margin-top:40px;
+  padding-left:20;
+  padding-top:20;
+}
+/*Estilos en función del contexto*/
+/*En este caso cuando la etiqueta b está dentro de p aplica este primer estilo.
+Cuando b está dentro de h2 aplica el siguiente y cuando no está en ninguno de los anteriores aplica solo negrita*/
+p b {
+	  border-top:3px double #215968;
+}
+h2 b {
+	width:200;
+	border: 10px ridge #215968;
+}
+h2 {
+  color:#215968;
+  text-align:center;
+  text-decoration:line-through ;
+  text-indent:20px;
+  font-size:18px;
+  margin-top:20px;
+}
+h3 {
+  background-color:#215968;
+  color:#91A8D1;
+  height:50px;
+  padding-top:15px;
+  padding-right:20px;
+  text-align:right;
+  text-decoration:underline;
+}
+h4 {
+  white-space: normal; 
+	/*Cambiar por nowrap, pre, pre-wrap, pre-line y ver diferencias*/
+  font-size:18px;
+}

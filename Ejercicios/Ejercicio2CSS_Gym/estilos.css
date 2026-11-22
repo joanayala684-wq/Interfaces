@@ -1,0 +1,151 @@
+:root {
+    --coral: rgb(255, 95, 73);
+    --fuente-titulo: 'Anton', Impact, 'Arial Narrow Bold', sans-serif;
+    --fuente-texto: 'Poppins', system-ui, sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: var(--fuente-texto);
+}
+a{
+    color: var(--coral);
+    text-decoration: none;
+}
+:focus-visible{
+    outline: 3px solid var(--coral);
+    outline-offset: 3px;
+}
+header h1{
+    background-color: var(--coral);
+    color: white;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: var(--fuente-titulo);
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+.menu{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solif var(--coral);
+    font-size: 20px;
+    letter-spacing: 0.25em;
+}
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    text-align: center;
+}
+.menu a:hover, .menu a:focus-visible{
+    font-weight: bold;
+    text-shadow: 1px 1px 1px gray;
+}
+.frase{
+    margin-top: 80px;
+    padding: 0 20%;
+    font-size: 2em;
+    word-spacing: 12px;
+}
+.resalta{
+    color: var(--coral);
+    font-style: italic;
+}
+.pasos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: clamp(20px, 6vw, 80px);
+    margin-top: 10vh;
+    padding: 0 10%;
+    list-style: none;
+    counter-reset: contador-pasos;
+}
+
+.pasos li {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    counter-increment: contador-pasos;
+    transition: box-shadow 0.3s ease;
+}
+
+.pasos li::before{
+    content: counter(contador-pasos, decimal-leading-zero);
+    font-size: 2em;
+    color: var(--coral);
+}
+.pasos img {
+    max-width: 60%;
+    height: auto;
+}
+.pasos li:hover {
+    box-shadow: 2px 2px 4px 2px gray;
+}
+.info{
+    margin-top: 40px;
+    height: 70vh;
+    background-image: url("imagenes/niños.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+}
+.inscripcion{
+    background-color: var(--coral);
+    width: 150px;
+    height: 200px;
+    margin-left: 100px;
+    padding-top: 60px;
+    text-align: center;
+    border-radius: 4px;
+}
+.inscripcion input, .inscripcion button{
+    font-family: inherit;
+    border-radius: 4px;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.der{
+    text-align: rigth;
+    margin-right: 20px;
+}
+.der a:hover{
+    text-decoration: underline;
+
+}
+@media (max-width: 700px) {
+    .menu li {
+        width: 100%;
+    }
+
+    .pasos {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+    }
+
+    .inscripcion {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pasos li {
+        transition: none;
+    }
+}

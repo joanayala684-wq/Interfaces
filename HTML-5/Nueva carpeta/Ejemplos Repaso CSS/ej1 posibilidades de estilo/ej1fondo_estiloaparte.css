@@ -1,0 +1,11 @@
+/*Sintaxis del css
+etiqueta {
+	atributo:valor;
+}*/
+body {
+	background:#F7C9C9;
+}
+p {
+	font-family:'Tahoma';
+	font-size:20;
+}

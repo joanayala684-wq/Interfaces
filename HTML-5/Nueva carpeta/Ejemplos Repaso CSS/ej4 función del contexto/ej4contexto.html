@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+    <title> ejemplo de estilos segun el contexto </title> 
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="ej4contexto.css"> 
+    </head> 
+    <body> 
+        <p>En este ejemplo, seguimos con los estilos de la hoja 
+        externa, pero vamos a comprobar que se verifican los 
+        estilos definidos en función del contexto: 
+        <h2>la negrita de una celda cualquiera de una tabla debe ser de color verde, 
+        y la negrita de una lista debe ser de color púrpura. Y de tamaño 12px</h2><p> 
+
+        <ul> 
+            <li>un elemento cualquiera</li> 
+            <li>un elemento con una palabra en <b>negrita</b></li> 
+            <li>otro elemento cualquiera</li> 
+        </ul>
+        <p></p>
+        <table> 
+            <tr><th>cabecera 1</th><th>cabecera 2</th></tr> 
+            <tr><td>celda (1,1)</td><td>celda (1,2)</td></tr> 
+            <tr><td><b>celda (2,1) en negrita</b></td><td>celda (2,2)</td></tr> 
+        </table> 
+    </body> 
+</html>

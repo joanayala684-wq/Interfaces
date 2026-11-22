@@ -1,0 +1,44 @@
+* {
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+	background:#FFE8E8;
+}
+#menu {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:36px;
+	width:30%;
+	float:left;/*El menú está situado a la izquierda*/
+	/*float:right /*El menú está situado a la derecha. Hay que quitar el margen izquierdo de la clase centro*/
+}
+#menu a {
+	display:block; /*Enlaces ocupan todo el ancho*/
+	background:#F7C9C9;
+	text-align:center;
+	color:#B26161;
+	text-decoration:none;
+}
+#menu a:hover {
+	background:#B26161;
+	color:#F7C9C9;
+}
+#centro {
+	font-family:Tahoma;
+	font-size: 24px;
+	color:#FFE8E8;
+	text-align:justify;
+	margin-left:30%; /*Tiene que ser mayor que el ancho de la parte que está flotando a la izquierda. Quitar con float rigth*/
+	background:#B26161;
+	border:4px solid #F7C9C9;
+	padding:20px;
+	height:500px;
+	width: 70%;
+}
+#centro img {
+	float:right; /*Para situar la imagen a la derecha del texto(Cambiar por left)*/
+	padding:10px;
+    height:50%;
+    width:30%;
+}
